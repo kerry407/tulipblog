@@ -1,0 +1,39 @@
+{% extends "blog/base.html" %}
+
+{% block navbar %}
+  {% include "blog/navbar.html" %}
+{% endblock navbar %}
+
+
+{% block content %}
+    <!-- Account Page  -->
+    
+    <div class="container mb-5">
+        <div class="form-container">
+            <div class="form-btn">
+                <span class="fs-2">Login</span>
+            </div>
+            <div class="d-flex justify-content-center mx-auto">
+                <form class="" id="RegForm" method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+                    <div class="mb-3">
+                        <input type="name" class="form-control" id="exampleInputName" placeholder="Username" name="username">
+                    </div>
+                    <div class="mb-3">                           
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name='password'>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    <div class="d-flex">
+                        <a href="{% url 'reset_password' %}" class="text-danger pe-1">Forgot Password?</a>
+                        <a href="{% url 'register' %}" class="text-muted">New to Tulip?</a>
+                    </div>
+                </form>               
+            </div>
+        </div>
+    </div>
+
+    <!-- Account Page Done  -->
+
+
+{% endblock content %}
+

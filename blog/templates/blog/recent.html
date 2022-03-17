@@ -1,0 +1,26 @@
+{% extends "blog/base.html" %}
+
+{% block recent %}
+    <style>
+        h2 a:hover {
+            color: #dc3545;
+        }
+    </style>
+
+    <div class="row mt-5 Recent">
+        <div id="travel" class="ms-5 mt-5 p-2 text-white fs-5"><div class="flex-row"><div class="d-flex justify-content-start">Recent</div></div></div>
+        {% for post in post3 %}
+            <div class="row ms-5 mt-5">
+                <div class="col-lg-6 col-md-6 recent-img">
+                <a href="{% url 'blog-detail' post.pk %}"><img src="{{post.image.url}}" class="img-fluid" alt=""></a>
+                </div>
+                <div class="col-lg-6 col-md-6 side-title">
+                <h2 class="fw-bold"><a href="{% url 'blog-detail' post.pk %}">{{post.title}}</a></h2>
+                <h6 class="travel-img-author mt-0 pt-0"> by <a href="" style="color: cornflowerblue;">{{post.author.profile.first_name}} {{post.author.profile.last_name}}.</a> <span class="date">{{post.date_posted|date:"F d, Y"}}</span></h6>
+                <h5 class="fs-6">{{post.pre_content|safe}}</h5>
+                <a href="{% url 'blog-detail' post.pk %}"><button class="btn text-white py-3 pt-0 mt-3">Read more &#187;</button></a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock recent %}

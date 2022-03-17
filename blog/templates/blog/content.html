@@ -1,0 +1,282 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+    <!-- Carousel Banner -->        
+    <div class="">
+        <div id="carouselExampleCaptions" class="carousel slide mt-2" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active banner">
+                    <a href="{% url 'blog-detail' post5.id %}"><img src="{{post5.image.url}}" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block mb-5">
+                        <p>
+                            <h1 class="text-white text-center text-wrap text-lg-center fs-1 fw-bold">{{post5.title}}</h1> <br>
+                            <div class="d-flex justify-content-center mt-3">
+                                <a href="{% url 'blog-detail' post5.id %}" class="button"><button class="btn btn-danger text-center">View full story &#187;</button></a>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            <div class="carousel-item banner">
+            <a href="{% url 'blog-detail' post6.id %}"><img src="{{post6.image.url}}" class="d-block w-100" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block mb-5">
+                <p>
+                <h1 class="text-white text-center text-wrap text-lg-center fs-1 fw-bold">{{post6.title}}</h1> <br>
+                <div class="d-flex justify-content-center mt-3">
+                    <a href="{% url 'blog-detail' post6.id %}" class="button"><button class="btn btn-danger text-center">View full story &#187;</button></a>
+                </div>
+                </p>
+            </div>
+            </div>
+            <div class="carousel-item banner">
+            <a href="{% url 'blog-detail' post7.id %}"><img src="{{post7.image.url}}" class="d-block w-100" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block mb-5">
+                <p>
+                <h1 class="text-white text-center text-wrap text-lg-center fs-1 fw-bold">{{post7.title}}</h1> <br>
+                <div class="d-flex justify-content-center mt-3">
+                    <a href="{% url 'blog-detail' post7.id %}" class="button"><button class="btn btn-danger text-center">View full story &#187;</button></a>
+                </div>
+                </p>
+            </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+    </div>
+
+    
+    <!-- Carousel Banner ends -->
+
+    <!-- First Blog Content -->
+    
+    <section class="pt-5 mt-5 ml-5 First-Blog-Section pb-5">
+        <div class="container-fluid px-5">
+          <div class="row main-row">
+              <a  id="top"></a>
+            <div class="col-lg-6 col-md-12 img-col">
+              <a href="{% url 'blog-detail' travel.pk %}"><img src="{{travel.image.url}}" class="img-fluid mb-0 pb-0" id="first-image"  alt=""></a>
+              <div class="title p-3"><h2 class="text-wrap fw-bold text-white mb-md-3">{{travel.title}} <br><a href="{% url 'blog-detail' travel.pk %}"><button class="btn btn-danger text-nowrap mb-md-3">Read more &#187;</button></a></h2></div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+            <div class="row mt-3">
+              <div class="img-col">
+                <a href="{% url 'blog-detail' food.pk %}"><img src="{{food.image.url}}" id="lonely-img" class="img-fluid pt-0" alt="" width=""></a>
+                <div class="title-3 p-3"><h2 class="text-wrap fw-bold text-white">{{food.title}}<br><a href="{% url 'blog-detail' food.pk %}"><button class="btn btn-danger">Read more &#187;</button></a></h2></div>
+              </div>
+            </div>
+            <div class="row" id="img-row">
+              <div class="col-lg-6 col-md-6 img-col mt-5">
+                <a href="{% url 'blog-detail' bus.pk %}"><img src="{{bus.image.url}}" class="img-fluid" id="down" alt=""></a>
+                <div class="title-2 p-3"><h2 class="text-wrap fw-bold text-white">{{bus.title}}<br><a href="{% url 'blog-detail' bus.pk %}"><button class="btn btn-danger">Read more &#187;</button></a></h2></div>
+              </div>
+              <div class="col-lg-6 col-md-6 img-col mt-5">
+                <a href="{% url 'blog-detail' health.pk %}"><img src="{{health.image.url}}" class="img-fluid down" id="down" alt=""></a>
+                <div class="title-1 p-3"><h2 class="text-wrap fw-bold text-white">{{health.title}}<br><a href="{% url 'blog-detail' health.pk %}"><button class="btn btn-danger">Read more &#187</button></a></h2></div> 
+              </div>       
+            </div>
+          </div>
+        </div>
+        </div>
+      </section>   
+    <!-- First Blog Content ends-->
+    <!-- Second Blog Content -->
+    <section class="px-5 Second-Blog-Content pt-5">
+        <a href="#top" id="to-top"><i class="fa fa-arrow-circle-o-up fa-3x"></i></a>
+        <div class="container">
+            <div class="row pt-5 first-row">
+            <div class="col-lg-8 col-md-12">
+                {% include "blog/travel.html" %}
+                {% include "blog/recent.html" %}
+                {% include "blog/business.html" %}
+            </div>
+            <div class="col-lg-4 col-md-12 side-bar">
+                <div class="row" id="Socials">
+                    <div class="ms-5 text-white text-white fs-5" id="follow"><div class="d-flex d-md-flex d-sm-flex justify-content-between mt-2 text-nowrap ps-0">Follow Us <i class="fa fa-bullhorn ms-1 fs-4"></i></div></div>
+                    <div class="d-flex row-1 mt-4 ms-5">
+                        <div class="col-lg-6 col-md-6 col-sm-6"><a href=""><button class="facebook text-white shadow-none btn text-nowrap"><i class="fa fa-facebook-square"></i> Facebook</button></a></div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 ms-0"><a href=""><button class="twitter text-white shadow-none text-nowrap btn"><i class="fa fa-twitter"></i> Twitter</button></a></div>
+                    </div>
+                    <div class="d-flex row-2 ms-5">
+                        <div class="col-lg-6 col-md-6 col-sm-6"><a href=""><button class="youtube text-white shadow-none btn"><i class="fa fa-youtube-play"></i> YouTube</button></a></div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 ms-0"><a href=""><button class="instagram text-white shadow-none btn text-nowrap"><i class="fa fa-instagram"></i> Instagram</button></a></div>
+                    </div>
+                </div>
+                {% include "blog/subscribe.html" %}
+                {% include "blog/popular.html" %}
+                {% include "blog/latest.html" %}
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <style>
+                
+        #popup-div {
+            display: block;
+            position: sticky;
+            top: 3rem;
+            z-index: 999;
+            background-color: transparent;
+        }
+
+        .cards-body {
+            width: 500px;
+            height: 300px;
+            background: #fff;
+            position: relative;
+            top: 200px;
+            margin: auto;
+            transform: translate(50%,-50%);
+            border-radius: 7px;
+            box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            display: flex;
+        }
+
+
+        .cards-body .forms {
+            width: 100%;
+            position: absolute;
+            top: 10%;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .popup-form input {
+            display: block;
+            margin: 2% auto auto 6%;
+            width: 38%;
+            height: 2.5rem;
+            border: none;
+            background-color: rgb(243, 243, 241);
+            padding-left: 10px;
+        }
+
+        .popup-form input::placeholder {
+            font-size: 15px;
+        }
+
+        .popup-form input:focus{
+            outline: 2px solid lightblue;
+        }
+
+        .popup-form button {
+            display: block;
+            width: 40%;
+            height: 2.5rem;
+            border: none;
+            margin: 3% auto auto 6%;
+            background-color: rgb(9, 204, 155);
+            color: #fff;
+            transition: .3s ease-in-out;
+        }
+
+        .popup-form button:hover {
+            background-color: rgb(52, 224, 181);
+            cursor: pointer;
+        }
+
+        .popup-form h5 {
+            margin: 0 auto auto 6%;
+            position: relative;
+            right: 30%;
+            top: 0.5rem;
+        }
+
+        .popup-form h5:hover {
+            cursor: pointer;
+        }
+
+        .message {
+        word-wrap: break-word;
+        }
+
+        .forms h3 {
+            display: block;
+            text-align: center;
+            position: relative;
+            right: 25%;
+            bottom: 1rem;
+            font-size: 2.1rem;
+        }
+
+        .cards-body .popup-logo {
+            width: 50%;
+            position: absolute;
+            color: #ceeaf5;
+            left: 50%;
+            background-color: #1f2532;
+            height: 100%;
+            border-bottom-right-radius: 7px;
+            border-top-right-radius: 7px;
+            border-top: 1px solid #1f2532;
+            border-bottom: 1px solid #1f2532;
+        }
+
+        .popup-logo h3 {
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            width: 100%;
+            font-family: 'Montez', cursive;
+            font-size: 2.5rem;
+        }
+
+        /* Animation popup */
+        .cards-body{
+            top: -350px;
+            animation-name: popup;
+            animation-fill-mode: forwards;
+            animation-delay: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-duration: 0.7s;
+        }
+
+        .fa-rss {
+            color: #11da78;
+        }
+
+        .fa-times{
+            position: absolute;
+            top: -2px;
+            right: 0px;
+            color: #fff;
+        }
+
+        .fa-times:hover {
+            cursor: pointer;
+        }
+
+        .close {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            font-size: 1.5rem;
+            width: 2rem;
+            height: 2rem;
+            background-color: #11da78;
+            border-bottom-left-radius: 100%;
+            border: 2px solid #11da78;
+            border-top-right-radius: 7px;
+        }
+
+        @keyframes popup {
+            0%{transform: translateY(0px);opacity: 0;}
+            70%{transform: translateY(600px);}
+            100%{transform: translateY(500px);opacity: 1;}
+        }
+    </style>
+{% endblock content %}

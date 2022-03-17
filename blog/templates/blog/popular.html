@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+
+{% block popular %}
+<div class="row ms-1" id="widget">
+    <div id="popular" class="mt-5 text-white fs-5 widget-bar"><div class="flex-row"><div class="mt-2">Popular</div></div></div>
+    <div class="mt-4 mb-2">
+        {% for posts in post8 %}
+            <style>
+                h5 a:hover{
+                    color: #dc3545;
+                }
+            </style>
+
+            <div class="row pb-1">
+                <div class="col-lg-6 col-md-6">
+                    <a href="{% url 'blog-detail' posts.pk %}"><img src="{{posts.image.url}}" alt="" class="img-thumbnail"></a>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <h5 class="fs-6 fw-bold text-wrap"><a href="{% url 'blog-detail' posts.pk %}">{{posts.title}}</a></h5>
+                    <h6>by <span class="date" style="color: cornflowerblue;">{{posts.author.profile.first_name}} {{posts.author.profile.last_name}},</span></h6>
+                    <h6 class="pt-0  mt-0 ms-0 date"  style="position: relative; bottom: 5px;">{{posts.date_posted|date:"F d, Y"}}</h6>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock popular %}

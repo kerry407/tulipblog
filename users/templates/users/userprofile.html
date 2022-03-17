@@ -1,0 +1,65 @@
+{% extends "blog/base.html" %}
+
+{% block navbar %}
+  {% include "blog/navbar.html" %}
+{% endblock navbar %}
+
+
+{% block content %}
+    <style>
+        .profile-img{
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            object-fit: cover;
+            object-position: center;
+        }
+        .user h1{
+            font-size: 55px;
+        }
+        .updateform {
+            width: 50%;
+        }
+    </style>
+    <section class="Second-Blog-Content pt-5">
+        <div class="container bg-light pt-5 ps-5 p-4">
+            <div class="row-1 ps-5 py-5"> 
+            <div class="d-lg-flex d-sm-inline">
+                <div class="me-5">
+                    <header><h1 class="text-danger">User Profile</h1></header>
+                    {% if user.profile.profile_image %}
+                        <img src="{{user.profile.profile_image.url}}" class="profile-img" alt="" >
+                    {% endif %}
+                </div>
+                <div class="pt-5 user">
+                    <h1 class="username fw-bold">{{user.username}}</h1>
+                    <p>
+                        <h5 class="email fs-6 text-secondary">{{user.email}}</h5>
+                    </p>
+                    <p>
+                        <h5 class="email fs-5 ">First Name: <span class="fs-6 text-secondary text-italic">{{user.profile.first_name}}</span></h5>
+                    </p>
+                    <p>
+                        <h5 class="email fs-5 ">Surname: <span class="fs-6 text-secondary text-italic">{{user.profile.last_name}}</span></h5>
+                    </p>
+                    <p>
+                        <h5 class="email fs-5 ">Bio: <span class="fs-6 text-secondary text-italic">{{user.profile.bio}}</span></h5>
+                    </p>
+                    <p>
+                        <h5 class="email fs-5 ">City: <span class="fs-6 text-secondary text-italic">{{user.profile.city}}</span></h5>
+                    </p>
+                </div>
+            </div>
+            <a href="{% url 'userupdate' %}"><button class="btn btn-lg btn-primary mt-5">click here to update profile</button></a>
+            <a href="{% url 'reset_password' %}"><button class="btn btn-lg btn-danger mt-5 ms-2">click here to reset password</button></a>
+            </div>
+       
+        </div>
+    
+            
+    </section>
+{% endblock content %}
+
+{% block footer %}
+  {% include "blog/footer.html" %}
+{% endblock footer %}

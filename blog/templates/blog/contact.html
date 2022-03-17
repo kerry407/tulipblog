@@ -1,0 +1,81 @@
+{% extends 'blog/base.html' %}
+
+{% block navbar %}
+{% include "blog/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+        <!-- Second Blog Content -->
+    <section class="px-5 Second-Blog-Content pt-5">
+      <div class="container">
+        <div class="row pt-5 first-row">
+        <div class="col-lg-8 col-md-12">
+          <div class="sticky-contact-form">
+            <div class="container contact-intro mx-auto">
+                <p>
+                    <h1 class="fs-1 me-2 fw-bold text-nowrap">Send us a message</h1>
+                </p>
+            </div>
+            <div class="container contact-form">
+              <!-- <form class="mt-4" method="post">
+      
+                  <div class="row d-flex">
+                      <div class="col-lg-6 col-md-6">
+                      
+                      <input type="name" class="form-control" id="exampleInputName" placeholder="Full Name" name="name">
+                      </div>
+                      <div class="col-lg-6 col-md-6 mb-3">
+                      
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email address" name="email">
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="mb-3">
+                          <textarea class="form-control" id="exampleInputEmail1" placeholder="write something..." name="message" cols="50" rows="10"></textarea>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary contact-button fs-5 fw-normal">Submit</button>
+              </form> -->
+              <form action="" method="post" class="mt-4">
+                {% csrf_token %}
+                  <div class="row d-flex">
+                    <div class="col-lg-6 col-md-6">
+                    
+                    <input type="name" class="form-control" id="exampleInputName" placeholder="Full Name" name="name">
+                    </div>
+                    <div class="col-lg-6 col-md-6 mb-3">
+                    
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email address" name="email">
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="mb-3">
+                          <textarea class="form-control" id="exampleInputEmail1" placeholder="write a message..." name="message" cols="50" rows="10"></textarea>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary contact-button fs-5 fw-normal">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-4 col-md-12 side-bar">
+            <div class="row" id="Socials">
+              <div class="ms-5 text-white text-white fs-5" id="follow"><div class="d-flex d-md-flex d-sm-flex justify-content-between mt-2 text-nowrap ps-0">Follow Us <i class="fa fa-bullhorn ms-1 fs-4"></i></div></div>
+              <div class="d-flex row-1 mt-4 ms-5">
+                <div class="col-lg-6 col-md-6 col-sm-6"><a href=""><button class="facebook text-white shadow-none btn text-nowrap"><i class="fa fa-facebook-square"></i> Facebook</button></a></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 ms-0"><a href=""><button class="twitter text-white shadow-none text-nowrap btn"><i class="fa fa-twitter"></i> Twitter</button></a></div>
+              </div>
+              <div class="d-flex row-2 ms-5">
+                <div class="col-lg-6 col-md-6 col-sm-6"><a href=""><button class="youtube text-white shadow-none btn"><i class="fa fa-youtube-play"></i> YouTube</button></a></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 ms-0"><a href=""><button class="instagram text-white shadow-none btn text-nowrap"><i class="fa fa-instagram"></i> Instagram</button></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock content %}
+
+{% block footer %}
+{% include "blog/footer.html" %}
+{% endblock footer %}

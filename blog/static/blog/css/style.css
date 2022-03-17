@@ -1,0 +1,1781 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montez&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: none;
+}
+
+
+
+.active h3,
+.footer-logo h3 {
+    font-family: 'Montez', cursive;
+    font-size: 2.5rem;
+    color: #05a6e6;
+}
+
+body {
+    background: #fff;
+    overflow-x: hidden;
+}
+
+.fa-bars,
+.fa-comments-o,
+.fa-bell-o,
+.fa-arrow-circle-o-up,
+.logo-icon,
+.fa-angle-double-down {
+    color: #11da78;
+}
+.fa-arrow-circle-o-up {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 700px;
+    scroll-behavior: smooth;
+    z-index: 999;
+    opacity: 0.7;
+}
+
+/* #comments {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 35px;
+    scroll-behavior: smooth;
+} */
+
+.navbrand {
+    margin-right: 48%;
+    
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.nav-item {
+    padding: 0 0.9rem 0 0;
+    
+}
+
+.dropdown i {
+    color: #11da78;
+    margin-left: 3px;
+    font-size: smaller;
+}
+
+#first-image {
+    height: 80%;
+    width: 100%;
+}
+
+
+.link-1:hover {
+    color: #11da78;
+}
+
+.dropdown .nav-link:hover {
+    color: #11da78;
+}
+
+.banner {
+    height: 650px;
+    position: relative;
+}
+
+.carousel-arrows {
+    width: 40px;
+    border-radius: 30px;
+    background: #fff;
+    height: 40px;
+    text-align: center;
+    vertical-align: baseline;
+    padding-top: 5px;
+}
+.carousel-arrows i {
+    color: #11da78;
+}
+
+.title {
+    position: relative;
+    bottom: 15%;
+    font-size: 5px;
+    
+  }
+
+.title-1 {
+    position: relative;
+    bottom: 70%;
+    font-size: 5px;
+    
+}
+
+.title-2 {
+    position: relative;
+    bottom: 70%;
+    font-size: 5px;
+    z-index:100;
+}
+
+.title-3 {
+    position: relative;
+    bottom: 29%;
+    font-size: 5px;
+    
+}
+.title h2,
+.title-1 h2,
+.title-2 h2,
+.title-3 h2 {
+    font-size: 30px;
+}
+
+.First-Blog-Section .img-col {
+    transition: .5s ease;
+    position: relative;
+}
+
+#down {
+    height: 80%;
+    position: relative;
+    padding-bottom: 15px;
+    bottom: 105px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+#first-image {
+    height: 927px;
+    object-fit: cover;
+    object-position: left;
+}
+#lonely-img {
+    height: 489px;
+    object-fit: cover;
+    object-position: center center;
+}
+/* .img-col {
+    opacity: 0.7;
+}
+
+.img-col:hover {
+    opacity: 1;
+} */
+
+.First-Blog-Section .img-col:hover h2 {
+    color: #fff;
+}
+
+.First-Blog-Section .btn-danger {
+    margin-top: 20px;
+}
+
+.First-Blog-Section {
+    background-color: #1f2532;
+}
+
+.description a {
+    text-decoration: none;
+} 
+.description .btn {
+    background-color: #11da78;
+    padding: 0px 5px 10px 5px;
+    width: fit-content;
+    color: white;
+    height: 25px;
+    border-radius: 30px;
+}
+.description .btn:hover {
+    background-color: #0eca6f;
+}
+
+#d-description {
+    position: relative;
+    top: 40px;
+    left: 10px;
+}
+.First-Blog-Section .col-lg-6 .description {
+    position: relative;
+    bottom: 138%;
+    left: 10px;
+}
+
+.descriptive .btn {
+    background-color: #11da78;
+    padding: 0px 5px 10px 5px;
+    width: fit-content;
+    color: white;
+    height: 25px;
+    border-radius: 30px;
+}
+
+.descriptive .btn:hover {
+    background-color: #0eca6f;
+}
+
+#abs {
+    position: absolute;
+    top: 20px;
+}
+
+#absolute {
+    position: absolute;
+    top: 0px;
+}
+
+/* Second Blog Section */
+
+.Second-Blog-Content {
+    background: rgb(231, 230, 230);
+    margin-top: 0;
+    
+}
+
+.first-row {
+    
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.travel-img-author h6 {
+    color: rgb(100, 149, 237);
+}
+.travel-img img {
+    border-radius: 5px;
+    position: relative;
+    top: 7px;
+    width: 400px;
+    height: 330px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.Second-Blog-Content .date {
+    color: rgb(177, 174, 174);
+    font-size: smaller;
+    margin-left: 5px;
+}
+
+.img-div {
+    height: 90px;
+    width: 110px;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.first-wrapper {
+    position: relative;
+    left: 30px;
+    margin-top: 20px;
+}
+
+.img-grid {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+#travel {
+    width: 80%;
+    border-radius: 5px;
+    background: rgb(37, 37, 37);
+    position: relative;
+    left: 10px;
+    bottom: 5px;
+}
+
+#travel .btn {
+    width: fit-content;
+    height: 30px;
+    position: relative;
+    padding: 2px 6px 2px 6px;
+    background-color: #11da78;
+}
+
+.Second-Blog-Content .flex-row {
+    display: flex;
+}
+
+
+
+#follow {
+    height: 2%;
+    width: 50%;
+    border-radius: 5px;
+    background: rgb(37, 37, 37);
+    position: relative;
+    left: 18px;
+    padding-bottom: 10px;
+}
+
+#follow i {
+    color: #11da78;
+}
+
+#Socials {
+    position: relative;
+    right: 40px;
+}
+
+
+#Socials button {
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    outline: none;
+}
+#Socials .d-flex {
+    padding-left: 25px;
+}
+
+#Socials .facebook {
+    background: #3b5999;
+}
+#Socials .twitter {
+    background: #00acee;
+}
+#Socials .youtube {
+    background: #f50000;
+}
+#Socials .instagram {
+    background: linear-gradient( 15deg,#ffb13d,#dd277b,#4d5ed4);
+}
+
+.First-Blog-Section a,
+.Second-Blog-Content a {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+#Socials .ms-0 {
+    position: relative;
+    right: 25px;
+}
+
+.row-1,
+.row-2 {
+    position: relative;
+    right: 15px;
+}
+
+#popular {
+    height: 10%;
+    width: 100%;
+    border-radius: 5px;
+    background: rgb(37, 37, 37);
+    position: relative;
+    left: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+/* .side-title {
+    position: relative;
+    right: 120px;
+} */
+.side-bar {
+    position: relative;
+    right: 40px;
+}
+
+.recent-img {
+    width: 290px;
+    margin-bottom: 30px;
+}
+
+.Recent img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 4px;
+}
+
+.widget {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.mini-item {
+    width: 150px;
+}
+
+.Recent .btn {
+    background-color: rgb(67, 190, 63);
+    height: 30px;
+}
+.subscription-card {
+    height: 300px;
+    width: 300px;
+    background: teal;
+    border-radius: 7px;
+}
+
+.subscribe-button {
+    width: 200px;
+    
+}
+
+.comment-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 40px;
+    background-color: rgb(192, 34, 34);
+    text-align: center;
+    padding-top: 15px;
+    position: relative;
+    bottom: 15px;
+}
+
+.comments .comment-body {
+    width: 325px;
+    max-width: 100%;
+}
+
+.comments hr {
+    border-top: 1px dashed rgb(233, 226, 226);
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+.second-widget-content {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-img img{
+    height: 240px;
+    width: 260px;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+/* footer */
+.footer {
+    background: rgb(231, 230, 230);
+}
+
+/* .footer .first-row {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.footer-icons {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+} */
+.footer .first-row {
+    background: #1f2532;
+}
+
+.footer-icons {
+    text-align: center;
+    color: white;
+}
+
+.footer-icons .col-lg-2 {
+    border-radius: 2px;
+    background: #2b3449;
+    margin-left: 5px;
+    width: 40px;
+}
+
+#popular,
+#follow,
+#travel {
+    background: #1f2532;
+}
+
+.footer a {
+    color: white;
+}
+
+.connect div {
+    display: flex;
+}
+
+.footer li {
+    list-style-type: none;
+    
+}
+.footer li a{
+    text-decoration: none;
+}
+
+.footer li a:hover {
+    color: rgb(209, 205, 205);
+}
+.connect h6:hover {
+    color: rgb(209, 205, 205);
+}
+
+.footer .facebook:hover {
+    background: #3b5999;
+    transform: scale(1.2);
+}
+.footer .twitter:hover {
+    background: #00acee;
+    transform: scale(1.2);
+}
+.footer .instagram:hover{
+    background: linear-gradient( 15deg,#ffb13d,#dd277b,#4d5ed4);
+    transform: scale(1.2);
+}
+.footer .youtube:hover {
+    background: #f50000;
+    transform: scale(1.2);
+}
+.footer .rss:hover {
+    background: #f26522;
+    transform: scale(1.2);
+}
+.footer .pinterest:hover{
+    background: #E60023;
+    transform: scale(1.2);
+}
+
+.footer .third-row {
+    background: #262e3f;
+}
+
+/* Index ends here */
+
+/* About Begins */
+.about-text h5 {
+    line-height: 35px;
+}
+.about-text h1 {
+    color: #11da78;
+    margin-top: 30px;
+}
+/* About ends here */
+
+/* Contact begins */
+.contact-intro h1 {
+    color: #11da78;
+}
+.contact-form {
+    color: #1f2532;
+}
+.contact-form input,
+.contact-form textarea {
+    background: rgba(155, 170, 175, 0.12);
+}
+.contact-button {
+    width: 100%;
+}
+.sticky-contact-form {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 130px;
+    margin-bottom: 100px;
+    
+}
+/* Contact ends here */
+
+/* blog begins*/
+.blog-text h5 {
+    line-height: 35px;   
+}
+
+.blogger h6 {
+    display: inline-block;
+    font-size: smaller;
+}
+.blogger h6 a:hover {
+    color: #11da78;
+}
+.author {
+    display: inline-block;
+}
+.author small {
+    color: rgb(173, 163, 163);
+}
+.author h6 {
+    color: #11da78;
+    font-size: 15px;
+}
+.fa-comments-o {
+    color: #11da78;
+}
+/* blog ends here */
+
+/* Account Begins */
+
+#LoginForm{
+    left: -300px;
+}
+#RegForm{
+    left: 0;
+}
+
+
+.form-container{
+    background: #11da78;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 7px;
+    color: #fff;
+    margin-top: 50px;
+}
+.form-container span{
+    font-weight: bold;
+    padding: 0 10px;
+    columns: #555;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-container form{
+    max-width: 300px;
+    padding: 0 40px;
+    position: absolute;
+    top: 130px;
+    transition:  1s;
+}
+
+form .btn{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+form .btn:focus{
+    outline: none;
+}
+#LoginForm{
+    left: -300px;
+}
+#RegForm{
+    left: 0;
+}
+form a{
+    font-size: 14px;
+    position: relative;
+    top: 20px;
+    text-decoration: none;
+}
+#Indicator{
+    width: 100px;
+    border: none;
+    background: #fff;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition:  1s;
+}
+
+#newMember {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#oldMember {
+    margin-top: 20px;
+    cursor: pointer;
+}
+/* Account ends here */
+
+.blog-image img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 4px;
+}
+a {
+    text-decoration: none;
+}
+.page-buttons{
+    width: 300px;
+    margin-top: 50px;
+}
+.page-buttons a{
+    text-decoration: none;
+    color: rgb(8, 14, 99);
+}
+.page-buttons span {
+    width: fit-content;
+    padding: 5px;
+    height: 30px;
+    background-color: transparent;
+    margin: 10px;
+    border-radius: 7px;
+    border: 1px solid#1da;
+}
+.page-buttons span:hover {
+    
+    background-color: #1da;
+}
+.page-buttons a:hover{
+    color: rgb(8, 14, 99);
+}
+h2 a:hover {
+    color: #dc3545;
+}
+h2 a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* Media Queries */
+
+/* index Media Query */
+
+@media screen and (max-width:500px){
+    
+.banner {
+    height: 500px;
+    position: relative;
+}
+
+.carousel-arrows{
+    display: none;
+}
+
+
+#down {
+    height: 489px;
+    position: relative;
+    /* padding-bottom: 15px; */
+    bottom: 105px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+#first-image {
+    height: 400px;
+    object-fit: cover;
+    object-position: left;
+}
+#lonely-img {
+    height: 489px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.carousel-arrows i {
+    color: #11da78;
+}
+
+.title {
+    position: relative;
+    bottom: 0;
+    margin-top: 180px;
+    
+    
+}
+
+.First-Blog-Section .btn-danger {
+    height: fit-content;
+    padding: 2px 1px;
+    position: relative;
+    bottom: 15px;
+}
+
+.title-1 {
+    position: relative;
+    top: -53%;
+    
+}
+
+.title-2 {
+    position: relative;
+    top: -53%;
+    font-size: 5px;
+    z-index:100;
+}
+
+.title-3 {
+    position: relative;
+    bottom: 26%;
+    
+}
+
+
+#down {
+    height: 80%;
+    position: relative;
+    padding-bottom: 15px;
+    bottom: 105px;
+}
+
+
+.First-Blog-Section .img-col {
+    transition: .5s ease;
+    position: relative;
+}
+/* .img-col {
+    opacity: 0.7;
+}
+
+.img-col:hover {
+    opacity: 1;
+} */
+
+.First-Blog-Section .img-col:hover h2 {
+    color: #fff;
+}
+
+.First-Blog-Section .btn-danger {
+    margin-top: 20px;
+}
+
+.First-Blog-Section {
+    background-color: #1f2532;
+}
+
+.description a {
+    text-decoration: none;
+} 
+.description .btn {
+    background-color: #11da78;
+    padding: 0px 5px 10px 5px;
+    width: fit-content;
+    color: white;
+    height: 25px;
+    border-radius: 30px;
+}
+
+
+.title h2,
+.title-1 h2,
+.title-2 h2,
+.title-3 h2 {
+    font-size: 18px;
+}
+
+#d-description {
+    position: relative;
+    top: 38px;
+    left: 10px;
+}
+.First-Blog-Section .col-lg-6 .description {
+    position: relative;
+    bottom: 130%;
+    left: 10px;
+}
+
+.Second-Blog-Content .col-lg-8 {
+    margin-left: -30px;
+}
+.Second-Blog-Content .col-lg-5{
+    margin-left: -18px;
+}
+
+.travel-img-author {
+    font-size: small;
+}
+
+.Recent {
+    align-items: center;
+    margin-left: -30px;
+}
+
+.side-title .travel-img-author {
+    font-size: smaller;
+}
+.side-title {
+    margin-bottom: 30px;
+}
+.Second-Blog-Content .first-row{
+    width: 120%;
+    position: relative;
+    right: 10px;
+}
+.Second-Blog-Content .col-lg-4{
+    margin-left: 12px;
+    padding-left: 30px;
+}
+#Socials button {
+    width: 115px;
+    padding-left: 7px;
+    margin-right: 20px;
+
+}
+
+
+.widget {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+.mini-item img{
+    width: 90px;
+    height: 86.36px;
+    object-fit: cover;
+    object-position: center;
+}
+.mini-item h5,
+.mini-item h6 {
+    width: 80%;
+    
+}
+
+.second-widget-content  {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.grid-img img {
+    height: 100%;
+}
+.subscription-card{
+    width: 250px;
+    height: 320px;
+}
+.subscribe-button{
+    width: 150px;
+    position: relative;
+    right: 25px;
+}
+.comments {
+    margin-bottom: 60px;
+}
+.footer {
+    padding : 10px 10px
+}
+
+
+
+/* about media query */
+
+.about-banner-img img {
+    max-width: 120%;
+    margin-left: 7px;
+}
+.about-text {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.about-text h5{
+    line-height: 20px;
+}
+
+/* contact media query */
+.contact-intro {
+    color: #11da78;
+}
+.contact-form {
+    color: #1f2532;
+    margin-bottom: 0;
+}
+.contact-form input,
+.contact-form textarea {
+    background: rgba(155, 170, 175, 0.12);
+    width: 250px;
+    color: #11da78;
+    margin-top: 20px;
+}
+.contact-form .btn-primary {
+    width: 250px;
+}
+.contact-button {
+    width: 100%;
+    margin-bottom: 0;
+}
+.sticky-contact-form {
+    margin-left: 4%;
+    margin-bottom: 10px;
+    position: static;
+}
+
+/* blog media query */
+.blogger {
+    width: 100%;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.blog-text h5 {
+    font-size: small;
+    line-height: 25px;
+    width: 100%;
+}
+
+/* account media query */
+
+
+}
+
+
+@media screen and (min-width:501px) and (max-width:768px){
+    
+.title {
+    position: relative;
+    bottom: 10%;
+    margin-top: 190px;
+    
+}
+
+.First-Blog-Section .btn-danger {
+    height: fit-content;
+    padding: 2px 1px;
+    position: relative;
+    bottom: 15px;
+    
+}
+
+
+#down {
+    height: 489px;
+    position: relative;
+    padding-bottom: 15px;
+    bottom: 105px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+#first-image {
+    height: 489px;
+    object-fit: cover;
+    object-position: left;
+}
+#lonely-img {
+    height: 489px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.title-1 {
+    position: relative;
+    top: -51%;
+    
+    
+}
+.title-2 {
+    position: relative;
+    top: -51%;
+    font-size: 5px;
+    z-index:100;
+}
+
+.title-3 {
+    position: relative;
+    bottom: 23%;
+    
+}
+
+
+.First-Blog-Section .img-col {
+    transition: .5s ease;
+    position: relative;
+}
+
+
+
+#down {
+    height: 80%;
+    position: relative;
+    padding-bottom: 15px;
+    bottom: 80px;
+}
+
+.title h2,
+.title-1 h2,
+.title-2 h2,
+.title-3 h2 {
+    font-size: 27px;
+}
+
+#d-description {
+    position: relative;
+    top: 35px;
+    left: 10px;
+}
+.First-Blog-Section .col-lg-6 .description {
+    position: relative;
+    bottom: 128%;
+    left: 10px;
+}
+
+
+
+/* .Second-Blog-Content .col-lg-8 {
+    margin-left: -30px;
+}
+.Second-Blog-Content .col-lg-5{
+    margin-left: -18px;
+} */
+
+.travel-img-author {
+    font-size: small;
+}
+
+.Recent {
+    align-items: center;
+    margin-left: -30px;
+}
+
+.side-title .travel-img-author {
+    font-size: smaller;
+}
+.side-title {
+    margin-bottom: 30px;
+}
+.Second-Blog-Content .first-row{
+    width: 120%;
+    position: relative;
+    right: 10px;
+}
+.Second-Blog-Content .col-lg-4{
+    margin-left: 12px;
+    padding-left: 30px;
+}
+#Socials {
+    position: relative;
+    right: 5px;
+    display: inline-block;
+    
+}
+#Socials .btn {
+    width: 230px;
+    margin-right: auto;
+}
+#popular-posts {
+    position: relative;
+    left: 40px;
+}
+#popular {
+    width: 80%;
+}
+#Socials button {
+    width: 115px;
+    padding-left: 7px;
+
+}
+
+
+.widget {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding-left: 50px;
+    
+}
+.widget-bar {
+    margin-left: 45px;
+}
+.mini-item img{
+    width: 70%;
+}
+.mini-item h5,
+.mini-item h6 {
+    width: 80%;
+    
+}
+.Business {
+    margin-right: 55px;
+    position: relative;
+    right: 20px;
+}
+
+.second-widget-content  {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+#widget {
+    margin-left: 40px;
+}
+.grid-img img {
+    height: 100%;
+}
+.subscribe {
+    margin-right: 60px;
+    margin-left: 0;
+}
+.subscribe #popular {
+    position: relative;
+    left: 0px;
+    right: 5px;
+    padding-left: 15px;
+}
+.subscription-card{
+    width: 50%;
+    height: 320px;
+    margin-left: 40px;
+}
+.subscription-card .form-control {
+    width: 100%;
+}
+
+.subscribe-button{
+    width: 250px;
+    position: relative;
+    right: 30px;
+}
+.comments {
+    margin-bottom: 60px;
+}
+.comments {
+    padding: 10px 50px;
+}
+#comments #popular {
+    position: relative;
+    right: 10px;
+    margin-right: 50px;
+  
+}
+.footer {
+    padding : 10px 10px
+}
+
+
+/* about media query */
+
+.about-banner-img img {
+    max-width: 100%;
+    margin-left: 18px;
+}
+.about-text {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.about-text h5{
+    line-height: 20px;
+}
+
+/* contact media query */
+.contact-intro {
+    color: #11da78;
+}
+.contact-form {
+    color: #1f2532;
+    margin-bottom: 0;
+}
+.contact-form input,
+.contact-form textarea {
+    background: rgba(155, 170, 175, 0.12);
+    width: 100%;
+    color: #11da78;
+    margin-top: 20px;
+}
+.contact-form .btn-primary {
+    width: 250px;
+}
+.contact-button {
+    width: 100%;
+    margin-bottom: 0;
+}
+.sticky-contact-form {
+    margin-left: 0%;
+    margin-bottom: 10px;
+    position: static;
+}
+
+/* blog media query */
+.blogger {
+    width: 100%;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+.blog-text h5 {
+    font-size: small;
+    line-height: 25px;
+    width: 100%;
+}
+
+.Second-Blog-Content .first-row {
+    position: relative;
+    right: 40px;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* account media query */
+
+}
+
+@media screen and (min-width:769px) and (max-width:991px) {
+/* index */
+
+
+#Socials {
+    position: relative;
+    right: -40px;
+    display: inline-block;
+    
+}
+
+#down {
+    height: 470px;
+    position: relative;
+    bottom: 105px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+#first-image {
+    height: 489px;
+    object-fit: cover;
+    object-position: left;
+}
+#lonely-img {
+    height: 489px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+#Socials .btn {
+    width: 200px;
+    margin-right: auto;
+}
+#popular-posts {
+    position: relative;
+    left: 80px;
+}
+#popular {
+    width: 80%;
+}
+#Socials button {
+    width: 115px;
+    padding-left: 7px;
+
+}
+
+
+.title h2,
+.title-1 h2,
+.title-2 h2,
+.title-3 h2 {
+    font-size: 23px;
+}
+
+.title {
+    position: relative;
+    bottom: 10%;
+    font-size: 5px;
+    margin-top: 200px;
+    
+}
+
+.title-1 {
+    position: relative;
+    top: -42%;
+    font-size: 5px;
+    
+}
+
+.title-2 {
+    position: relative;
+    top: -42%;
+    font-size: 5px;
+    z-index:100;
+
+}
+
+.title-3 {
+    position: relative;
+    bottom: 24%;
+    font-size: 5px;
+    
+}
+
+.First-Blog-Section .col-lg-6 .description {
+    position: relative;
+    bottom: 110%;
+    left: 10px;
+}
+
+#widget {
+    position: relative;
+    left: 80px;
+}
+.widget {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    position: relative;
+    right: 45px;
+}
+.subscribe-button{
+    width: 250px;
+    position: relative;
+    right: 20px;
+}
+.comments {
+    margin-bottom: 60px;
+}
+.comments {
+    padding: 10px 50px;
+}
+.side-bar {
+    margin-top: 50px;
+}
+.about-body #follow {
+    position: relative;
+    left: 22%;
+}
+.sticky-contact-form {
+    position: static;
+    margin-bottom: 20px;
+}
+.contact-button {
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.contact-body #follow {
+    position: relative;
+    left: 22%;
+}
+.blog-body #follow{
+    position: relative;
+    left: 22%;
+}
+    
+}
+
+@media screen and (min-width:992px) and (max-width:1200px) {
+/* index */
+
+
+/* .blog-body #Socials {
+    position: relative;
+    left: 0px;
+    display: inline-block;
+    
+} */
+#Socials .btn {
+    width: 115px;
+    /* margin-right: 40px; */
+}
+#popular-posts {
+    position: relative;
+    left: 40px;
+}
+#popular {
+    width: 80%;
+}
+#Socials button {
+    width: 115px;
+    padding-left: 7px;
+
+}
+
+
+ #widget {
+    position: relative;
+    left: 40px;
+}
+.widget {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    position: relative;
+    right: 45px;
+}
+.mini-item {
+    width: 100%;
+}
+
+.subscription-card{
+    width: 80%;
+    
+}
+
+.subscribe-button{
+    width: 250px;
+    position: relative;
+    right: 20px;
+}
+.comments {
+    margin-bottom: 60px;
+}
+.comments {
+    padding: 10px 50px;
+}
+.side-bar {
+    margin-top: 50px;
+}
+#follow {
+    position: relative;
+    left: 22%;
+}
+#Socials .btn {
+    margin-left: 50px;
+}
+#Socials .facebook,
+#Socials .youtube {
+    margin-right: 20px;
+}
+.sticky-contact-form {
+    position: static;
+    margin-bottom: 20px;
+}
+.contact-button {
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.contact-body #follow {
+    position: relative;
+    left: 23%;
+}
+
+
+.subscription-card{
+    /* width: 50%;
+    height: 320px; */
+    margin-left: 40px;
+}
+.First-Blog-Section #img-row {
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 110%;
+}
+
+.First-Blog-Section #img-row .img-col {
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: 400px;
+}
+.First-Blog-Section .col-lg-6 {
+    /* height: 100%; */
+    width: 50%;
+    height: 50%;
+}
+
+
+
+.title h2,
+.title-1 h2,
+.title-2 h2,
+.title-3 h2 {
+    font-size: 23px;
+}
+
+.title {
+    position: absolute;
+    top: 85%;
+}
+
+.title-1 {
+    position: relative;
+    top: -81.8%;
+    font-size: 5px;
+    
+}
+
+.title-2 {
+    position: relative;
+    top: -75%;
+    font-size: 5px;
+    z-index:100;
+
+}
+
+.title-3 {
+    position: relative;
+    bottom: 22%;
+    font-size: 5px;
+    
+}
+
+
+#down {
+    height: 470px;
+    position: relative;
+    bottom: 105px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+#first-image {
+    height: 500px;
+    object-fit: cover;
+    object-position: left;
+}
+#lonely-img {
+    height: 489px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+.First-Blog-Section .col-lg-6 .description {
+    position: absolute;
+    top: -23%;
+    left: 20px;
+}
+.down {
+    position: absolute;
+    bottom: 40px;
+}
+
+}
+
+
+@media screen and (max-width:1201px) {
+    
+
+.title h2,
+.title-1 h2,
+.title-2 h2,
+.title-3 h2 {
+    font-size: 23px;
+}
+
+.title {
+    position: absolute;
+    top: 68%;
+    margin-top: 80px;
+}
+
+.title-1 {
+    position: relative;
+    top: -46.8%;
+    font-size: 5px;
+    margin-top: -145px;
+    
+}
+
+.title-2 {
+    position: relative;
+    top: -46%;
+    font-size: 5px;
+    z-index:100;
+    margin-top: -148px;
+}
+
+.title-3 {
+    position: relative;
+    bottom: 22%;
+    font-size: 5px;
+    
+}
+
+
+#down {
+    height: 470px;
+    position: relative;
+    bottom: 105px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+#first-image {
+    height: 500px;
+    object-fit: cover;
+    object-position: left;
+}
+#lonely-img {
+    height: 489px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+.First-Blog-Section .col-lg-6 .description {
+    position: absolute;
+    top: -16%;
+    left: 20px;
+}
+
+
+
+
+}
+
+@media screen and (min-width:375px) and (max-width:499px) {
+
+.title h2,
+.title-1 h2,
+.title-2 h2,
+.title-3 h2 {
+    font-size: 23px;
+}
+
+.title {
+    position: absolute;
+    top: 32%;
+}
+
+.title-1 {
+    position: relative;
+    top: -43.8%;
+    font-size: 5px;
+    
+}
+
+.title-2 {
+    position: relative;
+    top: -44%;
+    font-size: 5px;
+    z-index:100;
+
+}
+
+.title-3 {
+    position: relative;
+    bottom: 28%;
+    font-size: 5px;
+    
+}
+
+
+#down {
+    height: 470px;
+    position: relative;
+    bottom: 105px;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+#first-image {
+    height: 470px;
+    object-fit: cover;
+    object-position: left;
+}
+#lonely-img {
+    height: 470px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+.First-Blog-Section .col-lg-6 .description {
+    position: absolute;
+    top: -14%;
+    left: 20px;
+}
+
+}
+
+/* dropdown styles */
+

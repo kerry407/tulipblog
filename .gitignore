@@ -1,0 +1,13 @@
+# created by virtualenv automatically
+*.log
+*.pot
+*.pyc
+.env
+__pycache__
+db.sqlite3
+media
+uploads/
+venv/
+pyvenv.cfg
+.vscode/
+images/

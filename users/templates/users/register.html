@@ -1,0 +1,51 @@
+{% extends 'blog/base.html' %}
+
+{% block navbar %}
+  {% include "blog/navbar.html" %}
+{% endblock navbar %}
+
+
+{% block content %}
+   <!-- Account Page  -->
+ 
+    <div class="container mb-5">
+        <!-- <div class="Test mx-auto mt-2 pb-0" style="width: 250px;"><h1 class=""></h1></div> -->
+        <div class="form-container">
+            <div class="form-btn mb-0" style="height: fit-content;">
+                <span class="fs-2" style="width:250px;"><legend>Join Us Today</legend></span>
+            </div>
+            <div class="d-flex justify-content-center mx-auto">          
+                <form class="" id="RegForm" method="POST" action="{% url 'register' %}">
+                {% csrf_token %} 
+                    <div class="mb-3">
+                        <input type="name" class="form-control" id="exampleInputName" placeholder="username" name="username">
+                    </div>
+                    <div class="mb-3">                       
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email address" name="email">
+                    </div>
+                    <div class="mb-3">                           
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password1">
+                    </div>
+                    <div class="mb-3">                            
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat password" name="password2">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label text-danger" for="exampleCheck1">Notify me about new blogs.</label>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Sign Up</button>
+                    <a href="{% url 'login' %}" class="text-muted">Already a member?</a>
+                </form>
+            </div>
+        </div>
+        {% for message in messages %}
+            <div class="alert alert-warning alert-dismissible fade show mt-5" role="alert">
+                <strong><i class="fa fa-exclamation-triangle me-2"></i>ERROR!</strong> {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endfor %}
+    </div>
+
+<!-- Account Page Done  -->
+{% endblock content %}
+

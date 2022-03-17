@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+
+
+{% block navbar %}
+{% include "blog/navbar.html" %}
+{% endblock navbar %}
+                
+    
+{% block content %}
+{% include "blog/content.html" %}
+{% endblock content %}
+
+
+{% block footer %}
+{% include "blog/footer.html" %}
+{% endblock footer %}
+
+<!-- 
+<div class="parent-div" id="popup-div">
+    <div class="card-body">
+        <div class="forms">
+                <h3>Turn on post <br>notifications!</h3>
+            <form action="" class="popup-form">
+                <input type="text" placeholder="Enter Full Name">
+                <input type="email" placeholder="Enter email address">
+                <button>Subscribe</button>
+                <h5 onclick="closePopup();">No, thank you!</h5>
+            </form>
+        </div>
+        <div class="popup-logo">
+            <h3>Tulip <i class="logo-icon fa fa-rss"></i></h3>
+            <div class="close">
+                <i onclick="closePopup();" class="fa fa-times"></i>
+            </div>
+        </div>
+    </div>
+</div> -->

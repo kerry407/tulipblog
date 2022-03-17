@@ -1,0 +1,21 @@
+{% extends "blog/base.html" %}
+
+{% block subscribe %}
+    <div class="row ms-1 d-flex justify-content-center subscribe mb-2">
+        <div id="popular" class="mt-5 text-white fs-5"><div class="flex-row d-flex"><div class="mt-2">Subscribe <i class="fa fa-bell-o ms-1 fs-4 text-success"></i></div></div></div>
+        <div class="subscription-card mt-4 d-flex justify-content-center">
+            <form method="post" class="mt-4 text-white">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                    <input type="name" class="form-control" id="exampleInputName" name="full_name">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email">
+                </div>
+                <button type="submit" class="btn btn-warning subscribe-button mt-4">Submit</button>
+            </form>
+        </div>
+    </div>
+{% endblock subscribe %}

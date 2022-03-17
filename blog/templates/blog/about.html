@@ -1,0 +1,48 @@
+{% extends 'blog/base.html' %}
+
+{% block navbar %}
+  {% include "blog/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+      <!-- Second Blog Content -->
+    <section class="px-5 Second-Blog-Content pt-5">
+      <div class="container">
+        <div class="row pt-5 first-row">
+        <div class="col-lg-8 col-md-12 mb-4">
+            <div class="container about-banner-img">
+                <img src="images/blueberries-free-photo-picjumbo-com.jpg" class="img-fluid" alt="">
+            </div>
+            <div class="container about-text">
+                  <p>
+                      <h1 class="fw-bold fs-1">About Tulip</h1>
+                  </p>
+                  <h5 class="fs-6 ">
+                   {{about.about}}
+                  </h5>
+            </div>
+        </div>
+          <div class="col-lg-4 col-md-12 side-bar mb-5">
+            <div class="row" id="Socials">
+              <div class="ms-5 text-white text-white fs-5" id="follow"><div class="d-flex d-md-flex d-sm-flex justify-content-between mt-2 text-wrap ps-0">Follow Us <i class="fa fa-bullhorn ms-1 fs-4"></i></div></div>
+              <div class="d-flex row-1 mt-4 ms-5">
+                <div class="col-lg-6 col-md-6 col-sm-6"><a href=""><button class="facebook text-white shadow-none btn text-nowrap"><i class="fa fa-facebook-square"></i> Facebook</button></a></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 ms-0"><a href=""><button class="twitter text-white shadow-none text-nowrap btn"><i class="fa fa-twitter"></i> Twitter</button></a></div>
+              </div>
+              <div class="d-flex row-2 ms-5">
+                <div class="col-lg-6 col-md-6 col-sm-6"><a href=""><button class="youtube text-white shadow-none btn"><i class="fa fa-youtube-play"></i> YouTube</button></a></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 ms-0"><a href=""><button class="instagram text-white shadow-none btn text-nowrap"><i class="fa fa-instagram"></i> Instagram</button></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock content %}
+
+{% block footer %}
+  {% include "blog/footer.html" %}
+{% endblock footer %}
+
+
+

@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block navbar %}
+  {% include "blog/navbar.html" %}
+{% endblock navbar %}
+
+{% block content %}
+    <style>
+        form input {
+            margin-bottom: 20px;
+        }
+    </style>
+  <div class="container">
+      <div class="row">
+          <legend class="mb-4"><h1 class="fw-bold">Add Blog Post</h1></legend>
+
+          <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+              {{form|crispy}}
+              {{ form.media }}
+              <button type="submit" class="btn btn-primary mt-3 mb-5">Submit</button>
+          </form>
+      </div>
+  </div>
+{% endblock content %}
+
+{% block footer %}
+  {% include "blog/footer.html" %}
+{% endblock footer %}
+

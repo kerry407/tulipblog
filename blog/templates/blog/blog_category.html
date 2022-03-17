@@ -1,0 +1,103 @@
+{% extends "blog/base.html" %}
+
+{% block navbar %}
+  {% include "blog/navbar.html" %}
+{% endblock navbar %}
+
+
+{% block content %}
+    <style>
+        .blog-image img{
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 4px;
+        }
+        a {
+            text-decoration: none;
+        }
+        .page-buttons{
+            width: 300px;
+            margin-top: 50px;
+        }
+        .page-buttons a{
+            text-decoration: none;
+            color: rgb(8, 14, 99);
+        }
+        .page-buttons span {
+            width: fit-content;
+            padding: 5px;
+            height: 30px;
+            background-color: transparent;
+            margin: 10px;
+            border-radius: 7px;
+            border: 1px solid#1da;
+        }
+        .page-buttons span:hover {
+            
+            background-color: #1da;
+        }
+        .page-buttons a:hover{
+            color: rgb(8, 14, 99);
+        }
+        h2 a:hover {
+            color: #dc3545;
+        }
+        h2 a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+    {% for name in category_name %}
+        <legend class="text-center"><h2 class="fs-1"><strong>{{name.category}} Posts</strong></h2></legend>
+    {% endfor %}
+        <div class="container mb-4">
+            <div class="row p-2 d-flex mt-5 ">
+            {% for post in category_post %}
+                <div class="col-lg-4 col-md-6 col-sm-12  mb-4">
+                    <div class="blog-image">
+                        <a href="{% url 'blog-detail' post.pk %}"><img src="{{post.image.url}}" class="img-fluid" alt=""></a>
+                    </div>
+                    <div class="blog-content mt-1">
+                        <h2><a href="{% url 'blog-detail' post.pk %}">{{post.title}}</a></h2>
+                        <h6 class="travel-img-author mt-0 pt-0"> by <a href="" style="color: cornflowerblue;">{{post.author.profile.first_name}} {{post.author.profile.last_name}}.</a> <span class="date">{{post.date_posted|date:"F d, Y"}}</span></h6>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+            <div class="page-buttons mx-auto">
+                {% if category_post.has_other_pages %}
+                    {% if category_post.has_previous %}
+                        <a href="?page={{category_post.previous_page_number}}">Prev</a>
+                    {% else %}
+                    <span><a>Prev</a></span>
+                    {% endif %}
+                    {% for item in category_post.paginator.page_range %} 
+                        {% if category_post.number == item %}
+                            <span>
+                                <a>{{item}}</a>
+                            </span>
+                        {% else %}
+                            <span>
+                                <a href="?page={{item}}">{{item}}</a>
+                            </span>
+                        {% endif %}
+                    {% endfor %}
+                    {% if category_post.has_next %}
+                        <a href="?page={{category_post.next_page_number}}">Next</a>
+                    {% else %}
+                        <span><a>Next</a></span>
+                    {% endif %}   
+                {% endif %}        
+            </div>
+        </div>
+    
+    
+{% endblock content %}
+
+
+
+{% block footer %}
+  {% include "blog/footer.html" %}
+{% endblock footer %}

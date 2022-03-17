@@ -1,0 +1,100 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block navbar %}
+{% include "blog/navbar.html" %}
+{% endblock navbar %}
+
+{% block blog-detail %}
+      <style>
+        .profile{
+          width: 300px;
+        }
+        .image-fluid{
+          width: 200px;
+          height: 200px;
+          border-radius: 100px;
+          object-fit: cover;
+          object-position: center;
+          margin-bottom: 20px;
+        }
+        .author-bio{
+          display: inline;
+          text-align: center;
+          margin-bottom: 30px;
+        }
+        .author-bio h5 {
+          color: rgb(192, 34, 34);
+        }
+        
+      </style>
+      <!-- Second Blog Content -->
+      <section class="px-5 Second-Blog-Content pt-5">
+        <div class="container">
+          <div class="row pt-5 first-row">
+          <div class="col-lg-8 col-md-12">
+            <div class="container blogger">
+                <h6><a href="{% url 'blog-home'  %}" style="color: #11da78;"> Home</a></h6> > <h6><a href="{% url 'category' blog_post.category %}">{{blog_post.category}}</a></h6>
+                <div class="row">
+                    <h1 class="fw-bold">{{blog_post.title}}</h1>
+                    <div class="d-flex justify-content-between">
+                        <div class="author"><img src="" alt=""> <h6 class="fw-bold text-wrap fs-6">{{blog_post.author.profile.first_name}} {{blog_post.author.profile.last_name}}</h6>.<small class="ms-1"> {{blog_post.date_posted|date:"F d, Y"}}</small></div>
+                        <div class="comment-no"><i class="fa fa-comments-o me-1"></i>{{comments.count}}</div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div><img src="{{blog_post.image.url}}" class="blog-img img-fluid" alt=""></div>
+                    <div class="blog-text mt-5">
+                        <h5>{{blog_post.content|safe}}</h5>
+                    </div>
+                    
+                    {% if blog_post.author == user  %}
+                    <div class="d-flex">
+                      <a href="{% url 'update-post' blog_post.pk %}"><button type="submit" class="btn btn-outline-secondary mt-2">Update Current Post</button></a>
+                      <a href="{% url 'delete-post' blog_post.pk %}"><button type="submit" class="btn btn-danger mt-2 ms-2">Delete Current Post</button></a>
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="row mt-3 profile mx-auto">
+                  <div class="d-flex justify-content-center">
+                      <img src="{{author.profile.profile_image.url}}" alt="" class="image-fluid">         
+                  </div>
+                  <div class="author-bio">
+                    Author:<h5> {{blog_post.author.profile.first_name}} {{blog_post.author.profile.last_name}}</h5>
+                    
+                    {% if author.profile.bio %}
+                    <h6 class="text-dark">{{author.profile.bio}}</h6>
+                    {% else %}
+                    <h6 class="text-dark"><span class="fw-bold fs-4">Bio</span>: None</h6>
+                    {% endif %}
+                      
+                    
+                  </div>
+                  
+                </div>
+            </div>
+          </div>
+            <div class="col-lg-4 col-md-12 side-bar blog-sidebar">
+              <div class="row" id="Socials">
+                <div class="ms-5 text-white text-white fs-5" id="follow"><div class="d-flex d-md-flex d-sm-flex justify-content-between mt-2 text-nowrap ps-0">Follow Us <i class="fa fa-bullhorn ms-1 fs-4"></i></div></div>
+                <div class="d-flex row-1 mt-4 ms-5">
+                  <div class="col-lg-6 col-md-6 col-sm-6"><a href=""><button class="facebook text-white shadow-none btn text-nowrap"><i class="fa fa-facebook-square"></i> Facebook</button></a></div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 ms-0"><a href=""><button class="twitter text-white shadow-none text-nowrap btn"><i class="fa fa-twitter"></i> Twitter</button></a></div>
+                </div>
+                <div class="d-flex row-2 ms-5">
+                  <div class="col-lg-6 col-md-6 col-sm-6"><a href=""><button class="youtube text-white shadow-none btn"><i class="fa fa-youtube-play"></i> YouTube</button></a></div>
+                  <div class="col-lg-6 col-md-6 col-sm-6 ms-0"><a href=""><button class="instagram text-white shadow-none btn text-nowrap"><i class="fa fa-instagram"></i> Instagram</button></a></div>
+                </div>
+              </div>
+              {% include "blog/comment.html" %}
+            </div>
+          </div>
+        </div>
+      </section>
+
+{% endblock blog-detail %}
+
+
+{% block footer %}
+{% include "blog/footer.html" %}
+{% endblock footer %}
