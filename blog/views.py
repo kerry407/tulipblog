@@ -38,7 +38,7 @@ def home(request):
             name = subscribe_form.cleaned_data.get('full_name')
             subscribe_email = subscribe_form.cleaned_data.get('email')
             subject = 'Thanks for subscribing to our blog!'
-            message = 'Hi {{name}}, welcome to Tulip blog! We are very pleased to welcome you to our home. Thank you for also subscribing. We will keep you updated on our latest blogs.'
+            message = 'Hi' + name + 'welcome to Tulip blog! We are very pleased to welcome you to our home. Thank you for also subscribing. We will keep you updated on our latest blogs.'
             try:
                 email = send_mail(
                     subject=subject,

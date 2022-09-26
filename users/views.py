@@ -14,11 +14,7 @@ def registerform(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            myuser = form.save()
-            p = Profile(user=myuser)
-            p.first_name = myuser.first_name
-            p.last_name = myuser.last_name
-            p.save()
+            form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Your Account has been created {username}, you can now login!')
             return redirect('login')

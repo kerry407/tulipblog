@@ -134,12 +134,12 @@
             </script>
         <div class="topnav" id="myTopnav">
             <a href="#home" class="active"><h3>Tulip <i class="logo-icon fa fa-rss"></i></h3></a>
-            {% if user.id is not None %}
+            {% if request.user.id is not None %}
                 <a class="btn-home" aria-current="page" href="{% url 'blog-home' %}">Home</a>
                 <a href="{% url 'blog-about' %}">About</a>
                 <a href="{% url 'blog-contact' %}">Contact</a>
                 <a href="{% url 'create-post' %}">Create Post</a>
-                <a class="btn-register" href="{% url 'userprofile' %}">{{user.profile.first_name}}'s profile</a>
+                <a class="btn-register" href="{% url 'userprofile' %}">{{ request.user.profile.first_name }} profile</a>
                 <a class="btn-danger ms-lg-2 ms-md-2 text-white py-1" href="{% url 'logout' %}">Sign out</a>
             {% else %}
                 <a class="btn-home" aria-current="page" href="{% url 'blog-home' %}">Home</a>
