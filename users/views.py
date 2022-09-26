@@ -40,10 +40,10 @@ def loginform(request):
         user = authenticate(request, username=username, password=password)
 
         if user is not None:
-                login(request, user)
-                return redirect('blog-home')
+            login(request, user)
+            return redirect('blog-home')
         else:
-                messages.info(request, f'Username Or Password is incorrect')
+            messages.info(request, f'Username Or Password is incorrect')
                 
     return render(request, 'users/login.html')
 
@@ -67,7 +67,7 @@ def userupdate(request):
             messages.success(request, f'Your profile has been successfully updated!')
             return redirect('userprofile')
         else:
-            messages.warning(request, userupdateform.errors)
+            messages.warning(request, profileupdateform.errors)
             return redirect('userupdate')
     else: 
         profileupdateform = ProfileUpdateForm(instance=request.user.profile)
