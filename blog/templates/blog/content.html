@@ -97,9 +97,60 @@
         <div class="container">
             <div class="row pt-5 first-row">
             <div class="col-lg-8 col-md-12">
-                {% include "blog/travel.html" %}
-                {% include "blog/recent.html" %}
-                {% include "blog/business.html" %}
+                <div class="row mt-2 Recent">
+                    <div id="travel" class="ms-5 p-2 text-white fs-5"><div class="d-flex justify-content-between">Latest <button type="submit" class="btn btn-success pt-0">View all</button></div></div>
+                    {% for post in post1 %}
+                        <div class="row ms-5 mt-5">
+                            <div class="col-lg-6 col-md-6 col-sm-6 recent-img">
+                            <a href="{% url 'blog-detail' post.pk %}"><img src="{{post.image.url}}" class="img-fluid" alt=""></a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 side-title">
+                            <h2 class="text-wrap fw-bold"><a href="{% url 'blog-detail' post.pk %}">{{post.title}}</a></h2>
+                            <h6 class="text-wrap fw-bold category">Category:<a href="{% url 'category' post.category %}"> <span class="catdata">{{post.category}}</span></a></h6>
+                            <h6 class="travel-img-author mt-0 pt-0"> by <a href="" style="color: cornflowerblue;">{{post.author.profile.first_name}} {{post.author.profile.last_name}}.</a> <span class="date">{{post.date_posted|date:"F d, Y"}}</span></h6>
+                            
+                            {% if not post.pre_content %}
+                                <h5 class="fs-6">{{post.content|truncatewords:25|safe}}</h5>
+                            {% else %}
+                                <h5 class="fs-6">{{post.pre_content|truncatewords:25|safe}}</h5>
+                            {% endif %}
+                                
+                           
+                            <a href="{% url 'blog-detail' post.pk %}"><button class="btn text-white py-3 pt-0 mt-3"> Read more &#187;</button></a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="row mt-5 Recent">
+                    <div id="travel" class="ms-5 mt-5 p-2 text-white fs-5"><div class="flex-row"><div class="d-flex justify-content-start">Recent</div></div></div>
+                    {% for post in post3 %}
+                        <div class="row ms-5 mt-5">
+                            <div class="col-lg-6 col-md-6 recent-img">
+                            <a href="{% url 'blog-detail' post.pk %}"><img src="{{post.image.url}}" class="img-fluid" alt=""></a>
+                            </div>
+                            <div class="col-lg-6 col-md-6 side-title">
+                            <h2 class="fw-bold"><a href="{% url 'blog-detail' post.pk %}">{{post.title}}</a></h2>
+                            <h6 class="travel-img-author mt-0 pt-0"> by <a href="" style="color: cornflowerblue;">{{post.author.profile.first_name}} {{post.author.profile.last_name}}.</a> <span class="date">{{post.date_posted|date:"F d, Y"}}</span></h6>
+                            <h5 class="fs-6">{{post.pre_content|safe}}</h5>
+                            <a href="{% url 'blog-detail' post.pk %}"><button class="btn text-white py-3 pt-0 mt-3">Read more &#187;</button></a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="Business row ms-4">
+                    <div id="travel" class="ms-4 mt-5 p-2 text-white fs-5 business"><div class="flex-row"><div class="d-flex justify-content-start">Business</div></div></div>
+                    <div class="second-widget-content">
+                        {% for post in post9 %}
+                            <div class="grid-item p-4">
+                                <div class="grid-img"><a href="{% url 'blog-detail' post.pk %}"><img src="{{post.image.url}}" alt="" class="img-fluid"></a></div>
+                                <div>
+                                    <h6 class="fw-bold fs-4"><a href="{% url 'blog-detail' post.pk %}">{{post.title}}</a></h6>
+                                    <h6>by <span class="" style="color: cornflowerblue;">{{post.author.profile.first_name}} {{post.author.profile.last_name}},</span><span class="date">{{post.date_posted|date:"F d, Y"}}.</span></h6>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
             <div class="col-lg-4 col-md-12 side-bar">
                 <div class="row" id="Socials">
@@ -113,9 +164,57 @@
                         <div class="col-lg-6 col-md-6 col-sm-6 ms-0"><a href=""><button class="instagram text-white shadow-none btn text-nowrap"><i class="fa fa-instagram"></i> Instagram</button></a></div>
                     </div>
                 </div>
-                {% include "blog/subscribe.html" %}
-                {% include "blog/popular.html" %}
-                {% include "blog/latest.html" %}
+                <div class="row ms-1 d-flex justify-content-center subscribe mb-2">
+                    <div id="popular" class="mt-5 text-white fs-5"><div class="flex-row d-flex"><div class="mt-2">Subscribe <i class="fa fa-bell-o ms-1 fs-4 text-success"></i></div></div></div>
+                    <div class="subscription-card mt-4 d-flex justify-content-center">
+                        <form method="post" class="mt-4 text-white">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Full Name</label>
+                                <input type="name" class="form-control" id="exampleInputName" name="full_name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" name="email">
+                            </div>
+                            <button type="submit" class="btn btn-warning subscribe-button mt-4">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row ms-1" id="widget">
+                    <div id="popular" class="mt-5 text-white fs-5 widget-bar"><div class="flex-row"><div class="mt-2">Popular</div></div></div>
+                    <div class="mt-4 mb-2">
+                        {% for posts in post8 %}
+                            <div class="row pb-1">
+                                <div class="col-lg-6 col-md-6">
+                                    <a href="{% url 'blog-detail' posts.pk %}"><img src="{{posts.image.url}}" alt="" class="img-thumbnail"></a>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                    <h5 class="fs-6 fw-bold text-wrap"><a href="{% url 'blog-detail' posts.pk %}">{{posts.title}}</a></h5>
+                                    <h6>by <span class="date" style="color: cornflowerblue;">{{posts.author.profile.first_name}} {{posts.author.profile.last_name}},</span></h6>
+                                    <h6 class="pt-0  mt-0 ms-0 date"  style="position: relative; bottom: 5px;">{{posts.date_posted|date:"F d, Y"}}</h6>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="row ms-1" id="widget">
+                    <div id="popular" class="mt-5 text-white fs-5 widget-bar"><div class="flex-row"><div class="mt-2">Travel</div></div></div>
+                    <div class="widget mt-4 mb-2 ms-5">
+                        {% for posts in post4 %}
+                            <div class="mini-item">
+                                <div>
+                                    <a href="{% url 'blog-detail' posts.pk %}"><img src="{{posts.image.url}}" alt="" class="img-thumbnail"></a>
+                                </div>
+                                <div>
+                                    <h5 class="fs-6 fw-bold"><a href="{% url 'blog-detail' posts.pk %}">{{posts.title}}</a></h5>
+                                    <h6>by <span class="date" style="color: cornflowerblue;">{{posts.author.profile.first_name}} {{posts.author.profile.last_name}},</span></h6>
+                                    <h6 class="pt-0  mt-0 ms-0 date" style="position: relative; bottom: 5px;">{{posts.date_posted|date:"F d, Y"}}</h6>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
             </div>
         </div>

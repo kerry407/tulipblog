@@ -15,8 +15,21 @@ html {
     border-color: none;
 }
 
+.comment-body{
+    width: 325px;
+    max-width: 100%;
+}
 
 
+h5 a:hover{
+    color: #dc3545;
+}
+h2 a:hover {
+    color: #dc3545;
+}
+.catdata {
+    color: rgb(20, 150, 117);
+}
 .active h3,
 .footer-logo h3 {
     font-family: 'Montez', cursive;
